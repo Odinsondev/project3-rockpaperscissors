@@ -68,3 +68,34 @@ function getComputerChoice(choice) {
   }
 
 console.log(getComputerChoice(choice))
+
+//step3 - Write a function that plays a single round of Rock Paper Scissors
+
+function playRound(playerSelection, computerSelection) {
+  if (playerSelection.toUpperCase() == "ROCK" && computerSelection.toUpperCase() == "ROCK") {
+    return "Tie. You both chose Rock."
+  } else if (playerSelection.toUpperCase() == "ROCK" && computerSelection.toUpperCase() == "PAPER") {
+    return "Sorry! You loose. Paper beats rock."
+  } else if (playerSelection.toUpperCase() == "ROCK" && computerSelection.toUpperCase() == "SCISSORS") {
+    return "Congratulations! You win. Rock beats scissors."
+  } else if (playerSelection.toUpperCase() == "PAPER" && computerSelection.toUpperCase() == "ROCK") {
+    return "Congratulations! You win. Paper beats rock."
+  } else if (playerSelection.toUpperCase() == "PAPER" && computerSelection.toUpperCase() == "PAPER") {
+    return "Tie. You both chose paper."
+  } else if (playerSelection.toUpperCase() == "PAPER" && computerSelection.toUpperCase() == "SCISSORS") {
+    return "Sorry! You loose. Scissors beat paper."
+  } else if (playerSelection.toUpperCase() == "SCISSORS" && computerSelection.toUpperCase() == "ROCK") {
+    return "Sorry! You loose. Rock beats scissors."
+  } else if (playerSelection.toUpperCase() == "SCISSORS" && computerSelection.toUpperCase() == "PAPER") {
+    return "Congratulations! You win. Scissors beats paper."
+  } else if (playerSelection.toUpperCase() == "SCISSORS" && computerSelection.toUpperCase() == "SCISSORS") {
+    return "Tie. You both chose scissors."
+  } else {
+    return playerSelection + " is not a valid selection. Please try again!"
+  }
+}
+ 
+const playerSelection = "Banana";
+const computerSelection = getComputerChoice(choice);
+console.log(playRound(playerSelection, computerSelection));
+
