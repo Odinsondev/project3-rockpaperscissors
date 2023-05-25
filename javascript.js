@@ -117,17 +117,28 @@ const computerSelection2 = getComputerChoice(choice);
 
 console.log(game(playerSelection2, computerSelection2))
 
+//score
+
+let playerScore = 0
+let computerScore = 0
 let thing1 = playRound(playerSelection2, computerSelection2)
 
 function score() {
   if (thing1 == "Congratulations! You win. Rock beats scissors." || thing1 == "Congratulations! You win. Paper beats rock." || thing1 =="Congratulations! You win. Scissors beats paper.") {
-  return "WTF"
+  playerScore = playerScore + 1;
+  return "Point to you"
+ } else if (thing1 == "Sorry! You loose. Paper beats rock." || thing1 == "Sorry! You loose. Scissors beat paper." || thing1 == "Sorry! You loose. Rock beats scissors.") {
+  computerScore = computerScore + 1
+  return "Point to the computer"
  } else {
-  return "nooo"
+  return "Try again"
  }
 }
 
 console.log(score())
+
+console.log(playerScore)
+console.log(computerScore)
 
 //round2
 
@@ -137,6 +148,32 @@ choice = getRandomInteger(0.1, 0.4)
 const computerSelection3 = getComputerChoice(choice);
 
 console.log(game(playerSelection3, computerSelection3))
+
+
+
+
+let thing2 = playRound(playerSelection3, computerSelection3)
+
+function score2() {
+  if (thing2 == "Congratulations! You win. Rock beats scissors." || thing1 == "Congratulations! You win. Paper beats rock." || thing1 =="Congratulations! You win. Scissors beats paper.") {
+  playerScore = playerScore + 1;
+  return "Point to you"
+ } else if (thing2 == "Sorry! You loose. Paper beats rock." || thing1 == "Sorry! You loose. Scissors beat paper." || thing1 == "Sorry! You loose. Rock beats scissors.") {
+  computerScore = computerScore + 1
+  return "Point to the computer"
+ } else {
+  return "Try again"
+ }
+}
+console.log(score2())
+
+console.log(playerScore)
+console.log(computerScore)
+
+//
+//try to add variable inside function, figure out why didn\t work
+
+
 
 
 //round3
