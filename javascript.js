@@ -96,12 +96,14 @@ function playRound(playerSelection, computerSelection) {
   }
 }
 
-let playerChoice = prompt("'Rock, Paper or Scissors' Test")
+let playerChoice = prompt("'Rock, Paper or Scissors' Test round")
 const playerSelection = playerChoice;
 const computerSelection = getComputerChoice(choice);
 
 
 console.log(playRound(playerSelection, computerSelection));
+
+console.log("That was a little test. Now the real game starts. Best of 5. Good luck!")
 
 // 5 rounds
 //round 1
@@ -155,10 +157,10 @@ console.log(game(playerSelection3, computerSelection3))
 let thing2 = playRound(playerSelection3, computerSelection3)
 
 function score2() {
-  if (thing2 == "Congratulations! You win. Rock beats scissors." || thing1 == "Congratulations! You win. Paper beats rock." || thing1 =="Congratulations! You win. Scissors beats paper.") {
+  if (thing2 == "Congratulations! You win. Rock beats scissors." || thing2 == "Congratulations! You win. Paper beats rock." || thing2 =="Congratulations! You win. Scissors beats paper.") {
   playerScore = playerScore + 1;
   return "Point to you"
- } else if (thing2 == "Sorry! You loose. Paper beats rock." || thing1 == "Sorry! You loose. Scissors beat paper." || thing1 == "Sorry! You loose. Rock beats scissors.") {
+ } else if (thing2 == "Sorry! You loose. Paper beats rock." || thing2 == "Sorry! You loose. Scissors beat paper." || thing2 == "Sorry! You loose. Rock beats scissors.") {
   computerScore = computerScore + 1
   return "Point to the computer"
  } else {
@@ -185,6 +187,26 @@ const computerSelection4 = getComputerChoice(choice);
 
 console.log(game(playerSelection4, computerSelection4))
 
+
+
+let thing3 = playRound(playerSelection4, computerSelection4)
+
+function score3() {
+  if (thing3 == "Congratulations! You win. Rock beats scissors." || thing3 == "Congratulations! You win. Paper beats rock." || thing3 =="Congratulations! You win. Scissors beats paper.") {
+  playerScore = playerScore + 1;
+  return "Point to you"
+ } else if (thing3 == "Sorry! You loose. Paper beats rock." || thing3 == "Sorry! You loose. Scissors beat paper." || thing3 == "Sorry! You loose. Rock beats scissors.") {
+  computerScore = computerScore + 1
+  return "Point to the computer"
+ } else {
+  return "Try again"
+ }
+}
+console.log(score3())
+
+console.log(playerScore)
+console.log(computerScore)
+
 //round4
 
 let playerChoice5 = prompt("'Rock, Paper or Scissors' Round 4")
@@ -195,6 +217,25 @@ const computerSelection5 = getComputerChoice(choice);
 console.log(game(playerSelection5, computerSelection5))
 
 
+
+let thing4 = playRound(playerSelection5, computerSelection5)
+
+function score4() {
+  if (thing4 == "Congratulations! You win. Rock beats scissors." || thing4 == "Congratulations! You win. Paper beats rock." || thing4 =="Congratulations! You win. Scissors beats paper.") {
+  playerScore = playerScore + 1;
+  return "Point to you"
+ } else if (thing4 == "Sorry! You loose. Paper beats rock." || thing4 == "Sorry! You loose. Scissors beat paper." || thing4 == "Sorry! You loose. Rock beats scissors.") {
+  computerScore = computerScore + 1
+  return "Point to the computer"
+ } else {
+  return "Try again"
+ }
+}
+console.log(score4())
+
+console.log(playerScore)
+console.log(computerScore)
+
 //round5
 
 let playerChoice6 = prompt("'Rock, Paper or Scissors' Round 5")
@@ -203,3 +244,24 @@ choice = getRandomInteger(0.1, 0.4)
 const computerSelection6 = getComputerChoice(choice);
 
 console.log(game(playerSelection6, computerSelection6))
+
+
+
+let thing5 = playRound(playerSelection5, computerSelection5)
+
+
+function score5() {
+  if (thing5 == "Congratulations! You win. Rock beats scissors." || thing5 == "Congratulations! You win. Paper beats rock." || thing5 =="Congratulations! You win. Scissors beats paper.") {
+  playerScore = playerScore + 1;
+  return "Point to you"
+ } else if (thing5 == "Sorry! You loose. Paper beats rock." || thing5 == "Sorry! You loose. Scissors beat paper." || thing5 == "Sorry! You loose. Rock beats scissors.") {
+  computerScore = computerScore + 1
+  return "Point to the computer"
+ } else {
+  return "Try again"
+ }
+}
+console.log(score5())
+
+console.log(playerScore)
+console.log(computerScore)
