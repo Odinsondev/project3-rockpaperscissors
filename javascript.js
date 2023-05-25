@@ -71,6 +71,7 @@ console.log(getComputerChoice(choice))
 
 //step3 - Write a function that plays a single round of Rock Paper Scissors
 
+
 function playRound(playerSelection, computerSelection) {
   if (playerSelection.toUpperCase() == "ROCK" && computerSelection.toUpperCase() == "ROCK") {
     return "Tie. You both chose Rock."
@@ -94,8 +95,74 @@ function playRound(playerSelection, computerSelection) {
     return playerSelection + " is not a valid selection. Please try again!"
   }
 }
- 
-const playerSelection = "Banana";
+
+let playerChoice = prompt("'Rock, Paper or Scissors' Test")
+const playerSelection = playerChoice;
 const computerSelection = getComputerChoice(choice);
+
+
 console.log(playRound(playerSelection, computerSelection));
 
+// 5 rounds
+//round 1
+
+function game(playerSelectionX, computerSelectionX) {
+  return playRound(playerSelectionX, computerSelectionX);
+}
+
+let playerChoice2 = prompt("'Rock, Paper or Scissors' Round 1")
+const playerSelection2 = playerChoice2;
+choice = getRandomInteger(0.1, 0.4)
+const computerSelection2 = getComputerChoice(choice);
+
+console.log(game(playerSelection2, computerSelection2))
+
+let thing1 = playRound(playerSelection2, computerSelection2)
+
+function score() {
+  if (thing1 == "Congratulations! You win. Rock beats scissors." || thing1 == "Congratulations! You win. Paper beats rock." || thing1 =="Congratulations! You win. Scissors beats paper.") {
+  return "WTF"
+ } else {
+  return "nooo"
+ }
+}
+
+console.log(score())
+
+//round2
+
+let playerChoice3 = prompt("'Rock, Paper or Scissors' Round 2")
+const playerSelection3 = playerChoice3;
+choice = getRandomInteger(0.1, 0.4)
+const computerSelection3 = getComputerChoice(choice);
+
+console.log(game(playerSelection3, computerSelection3))
+
+
+//round3
+
+let playerChoice4 = prompt("'Rock, Paper or Scissors' Round 3")
+const playerSelection4 = playerChoice4;
+choice = getRandomInteger(0.1, 0.4)
+const computerSelection4 = getComputerChoice(choice);
+
+console.log(game(playerSelection4, computerSelection4))
+
+//round4
+
+let playerChoice5 = prompt("'Rock, Paper or Scissors' Round 4")
+const playerSelection5 = playerChoice5;
+choice = getRandomInteger(0.1, 0.4)
+const computerSelection5 = getComputerChoice(choice);
+
+console.log(game(playerSelection5, computerSelection5))
+
+
+//round5
+
+let playerChoice6 = prompt("'Rock, Paper or Scissors' Round 5")
+const playerSelection6 = playerChoice6;
+choice = getRandomInteger(0.1, 0.4)
+const computerSelection6 = getComputerChoice(choice);
+
+console.log(game(playerSelection6, computerSelection6))
