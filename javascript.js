@@ -2,6 +2,32 @@
 
 console.log("Hello World");
 
+//step0.1 try to add variable inside a function
+
+let a = 5
+let b
+b = 3
+
+function simpleTest() {
+ return a + b;
+}
+
+console.log(simpleTest())
+
+
+
+function simpleTest2() {
+  let c = 2;
+  return a + c
+}
+ console.log(simpleTest2())
+
+console.log(a)
+console.log(b)
+//console.log(c)   - error as c is not in global scope
+
+
+
 //Step1 - figure out how to run and display result for math.random
 
 function getRandom() {
@@ -71,7 +97,6 @@ console.log(getComputerChoice(choice))
 
 //step3 - Write a function that plays a single round of Rock Paper Scissors
 
-
 function playRound(playerSelection, computerSelection) {
   if (playerSelection.toUpperCase() == "ROCK" && computerSelection.toUpperCase() == "ROCK") {
     return "Tie. You both chose Rock."
@@ -105,8 +130,10 @@ console.log(playRound(playerSelection, computerSelection));
 
 console.log("That was a little test. Now the real game starts. Best of 5. Good luck!")
 
-// 5 rounds
-//round 1
+
+
+//5 rounds
+//round1
 
 function game(playerSelectionX, computerSelectionX) {
   return playRound(playerSelectionX, computerSelectionX);
@@ -119,7 +146,7 @@ const computerSelection2 = getComputerChoice(choice);
 
 console.log(game(playerSelection2, computerSelection2))
 
-//score
+//round1 - score
 
 let playerScore = 0
 let computerScore = 0
@@ -142,6 +169,8 @@ console.log(score())
 console.log(playerScore)
 console.log(computerScore)
 
+
+
 //round2
 
 let playerChoice3 = prompt("'Rock, Paper or Scissors' Round 2")
@@ -151,8 +180,7 @@ const computerSelection3 = getComputerChoice(choice);
 
 console.log(game(playerSelection3, computerSelection3))
 
-
-
+//round2 - score
 
 let thing2 = playRound(playerSelection3, computerSelection3)
 
@@ -172,10 +200,6 @@ console.log(score2())
 console.log(playerScore)
 console.log(computerScore)
 
-//
-//try to add variable inside function, figure out why didn\t work
-
-
 
 
 //round3
@@ -187,7 +211,7 @@ const computerSelection4 = getComputerChoice(choice);
 
 console.log(game(playerSelection4, computerSelection4))
 
-
+//round3 - score
 
 let thing3 = playRound(playerSelection4, computerSelection4)
 
@@ -207,6 +231,22 @@ console.log(score3())
 console.log(playerScore)
 console.log(computerScore)
 
+//round3 - check winner
+
+function checkWinner() {
+  if (playerScore == 3) {
+    alert("You win!")
+    throw new Error("You win!")
+  } else if (computerScore ==3) {
+    alert("You loose!")
+    throw new Error("You loose!")
+  } else {}
+}
+
+console.log(checkWinner())
+
+
+
 //round4
 
 let playerChoice5 = prompt("'Rock, Paper or Scissors' Round 4")
@@ -216,7 +256,7 @@ const computerSelection5 = getComputerChoice(choice);
 
 console.log(game(playerSelection5, computerSelection5))
 
-
+//round4 - score
 
 let thing4 = playRound(playerSelection5, computerSelection5)
 
@@ -236,6 +276,12 @@ console.log(score4())
 console.log(playerScore)
 console.log(computerScore)
 
+//round4 - check winner
+
+console.log(checkWinner())
+
+
+
 //round5
 
 let playerChoice6 = prompt("'Rock, Paper or Scissors' Round 5")
@@ -245,10 +291,9 @@ const computerSelection6 = getComputerChoice(choice);
 
 console.log(game(playerSelection6, computerSelection6))
 
+//round5 - score
 
-
-let thing5 = playRound(playerSelection5, computerSelection5)
-
+let thing5 = playRound(playerSelection6, computerSelection6)
 
 function score5() {
   if (thing5 == "Congratulations! You win. Rock beats scissors." || thing5 == "Congratulations! You win. Paper beats rock." || thing5 =="Congratulations! You win. Scissors beats paper.") {
@@ -265,3 +310,42 @@ console.log(score5())
 
 console.log(playerScore)
 console.log(computerScore)
+
+//round5 - check winner
+
+console.log(checkWinner())
+
+
+
+//round6
+
+let playerChoice7 = prompt("'Rock, Paper or Scissors' Round 6")
+const playerSelection7 = playerChoice7;
+choice = getRandomInteger(0.1, 0.4)
+const computerSelection7 = getComputerChoice(choice);
+
+console.log(game(playerSelection7, computerSelection7))
+
+//round6 - score
+
+let thing6 = playRound(playerSelection7, computerSelection7)
+
+function score6() {
+  if (thing6 == "Congratulations! You win. Rock beats scissors." || thing6 == "Congratulations! You win. Paper beats rock." || thing6 =="Congratulations! You win. Scissors beats paper.") {
+  playerScore = playerScore + 1;
+  return "Point to you"
+ } else if (thing6 == "Sorry! You loose. Paper beats rock." || thing6 == "Sorry! You loose. Scissors beat paper." || thing6 == "Sorry! You loose. Rock beats scissors.") {
+  computerScore = computerScore + 1
+  return "Point to the computer"
+ } else {
+  return "Try again"
+ }
+}
+console.log(score6())
+
+console.log(playerScore)
+console.log(computerScore)
+
+//round6 - check winner
+
+console.log(checkWinner())
