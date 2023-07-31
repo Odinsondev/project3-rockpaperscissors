@@ -1,0 +1,121 @@
+body {
+  font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0px;
+}
+
+
+.header-top {
+  background-color: rgb(32, 41, 47);
+  height: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  border: 1px solid red
+}
+
+.header-bottom {
+  display: flex;
+}
+
+.empty {
+  background-color: rgb(52, 67, 79);
+  flex: 1;
+  border: 1px solid red;
+}
+
+.content1 {
+  flex: 4;
+  background-color: rgb(52, 67, 79);
+  text-align: center;
+  margin-top: 50px;
+  border: 1px solid red
+}
+
+.text1 {
+  color: rgb(219, 220, 173);
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.text2 {
+  color: rgb(168, 169, 133);
+  font-size: 20px;
+  margin: 10px;
+}
+
+.content2 {
+  background-color: rgb(71, 112, 99);
+  margin: 0px;
+  padding: 0px;
+  border: 1px solid red;
+}
+
+.buttons-outer {
+  display: flex;
+  justify-content: center;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+  background-color: #afb2b8;
+  height: fit-content;
+  width: fit-content;
+  margin: 0px;
+  padding: 50px;
+  border: 1px solid red;
+  border-radius: 10px;
+}
+
+button {
+  background-color: #9b1313;
+  font-size: 18px;
+  font-weight: bold;
+  color: #F9FAF8;
+  width: 140px;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid gainsboro
+}
+
+button:hover {
+  background-color: #c66618;
+  font-size: 18px;
+  font-weight: bold;
+  color: #F9FAF8;
+  width: 140px;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid gainsboro
+}
+
+button:active {
+  background-color: #d9c147;
+  font-size: 18px;
+  font-weight: bold;
+  color: #F9FAF8;
+  width: 140px;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid rgb(220, 19, 19)
+}
+
+.computer-outer {
+  display: flex;
+  justify-content: center;
+}
+
+.computer {
+  justify-content: center;
+  gap: 50px;
+  background-color: #afb2b8;
+  height: fit-content;
+  width: fit-content;
+  margin: 0px;
+  padding: 50px;
+  border: 1px solid red;
+  border-radius: 10px;
+}

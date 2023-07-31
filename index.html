@@ -5,17 +5,50 @@
   <head>
     <title>Rock Paper Scissors</title>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css">
   </head>
 
   <body>
-    <h1>LET THE BATTLE BEGIN !!!</h1>
-    <br>
-    <button id="button1">ROCK</button>
-    <button id="button2">PAPER</button>
-    <button id="button3">SCISSORS</button>
-    <br>
-    <dir id="dir">
-      <p id="results">Results</p>
+    <header>
+      <div class="header-top"></div>
+      <div class="header-bottom">
+        <div class="empty"></div>
+        <div class="content1">
+          <p class="text1">ROCK PAPER SCISSORS</p>
+          <p class="text2">Test your wits against a state of the art AI</p>
+          <p class="text2">The future of humanity is at stake !</p>
+          <p class="text2">Best of 5 wins</p>
+          <p class="text2">Let the battle begin !</p>
+        </div>
+        <div class="empty"></div>
+      </div>
+    </header>
+
+    <dir class="content2">
+      <br>
+      <dir class="buttons-outer">
+        <dir class="buttons">
+          <button id="button1">ROCK</button>
+          <button id="button2">PAPER</button>
+          <button id="button3">SCISSORS</button>
+        </dir>
+      </dir>
+      <br>
+      <dir class="computer-outer">
+        <dir class="computer" id="dir0">
+          <h2>Computer selection:</h2>
+          <p id="compSelection">Computer is thinking</p>
+        </dir>
+      </dir>
+      <br>
+      <dir id="dir">
+        <p id="results">Results</p>
+      </dir>
+      <br>
+      <dir id="dir2">
+        <h2>Score</h2>
+        <p id="score">0 - 0</p>
+      </dir>
     </dir>
 
     <script src="javascript.js"></script>
