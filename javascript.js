@@ -71,141 +71,141 @@ function selectScissors() {
 function playRound(playerSelection, computerSelection) {
   if (playerSelection.toUpperCase() == "ROCK" && computerSelection.toUpperCase() == "ROCK") {
     //modifies DOM to display round result
-    let div = document.getElementById('dir');
+    let div = document.getElementById('div1');
     let p = document.getElementById('results');
     results.textContent = "Tie. You both chose Rock.";
     div.appendChild(p);
     //modifies DOM to display computer choice
     p0.textContent = computerSelection;
-    dir0.appendChild(p0);
+    div0.appendChild(p0);
     //check winner
     checkWinner();
     //console message
     return "Tie. You both chose Rock.";
   } else if (playerSelection.toUpperCase() == "ROCK" && computerSelection.toUpperCase() == "PAPER") {
     //modifies DOM to display round result
-    let div = document.getElementById('dir');
+    let div = document.getElementById('div1');
     let p = document.getElementById('results');
     results.textContent = "Sorry! You loose. Paper beats rock.";
     div.appendChild(p);
     //modifies DOM to display computer choice
     p0.textContent = computerSelection;
-    dir0.appendChild(p0);
+    div0.appendChild(p0);
     //updates score and modifies DOM to display score
     computerScore = computerScore + 1;
     p2.textContent = playerScore + " - " + computerScore;
-    dir2.appendChild(p2);
+    div2.appendChild(p2);
     //check winner
     checkWinner();
     //console message
     return "Sorry! You loose. Paper beats rock."
   } else if (playerSelection.toUpperCase() == "ROCK" && computerSelection.toUpperCase() == "SCISSORS") {
     //modifies DOM to display round result
-    let div = document.getElementById('dir');
+    let div = document.getElementById('div1');
     let p = document.getElementById('results');
     results.textContent = "Congratulations! You win. Rock beats scissors.";
     div.appendChild(p);
     //modifies DOM to display computer choice
     p0.textContent = computerSelection;
-    dir0.appendChild(p0);
+    div0.appendChild(p0);
     //updates score and modifies DOM to display score
     playerScore = playerScore + 1;
     p2.textContent = playerScore + " - " + computerScore;
-    dir2.appendChild(p2);
+    div2.appendChild(p2);
     //check winner
     checkWinner();
     //console message
     return "Congratulations! You win. Rock beats scissors."
   } else if (playerSelection.toUpperCase() == "PAPER" && computerSelection.toUpperCase() == "ROCK") {
     //modifies DOM to display round result
-    let div = document.getElementById('dir');
+    let div = document.getElementById('div1');
     let p = document.getElementById('results');
     results.textContent = "Congratulations! You win. Paper beats rock.";
     div.appendChild(p);
     //modifies DOM to display computer choice
     p0.textContent = computerSelection;
-    dir0.appendChild(p0);
+    div0.appendChild(p0);
     //updates score and modifies DOM to display score
     playerScore = playerScore + 1;
     p2.textContent = playerScore + " - " + computerScore;
-    dir2.appendChild(p2);
+    div2.appendChild(p2);
     //check winner
     checkWinner();
     //console message
     return "Congratulations! You win. Paper beats rock."
   } else if (playerSelection.toUpperCase() == "PAPER" && computerSelection.toUpperCase() == "PAPER") {
     //modifies DOM to display round result
-    let div = document.getElementById('dir');
+    let div = document.getElementById('div1');
     let p = document.getElementById('results');
     results.textContent = "Tie. You both chose paper.";
     div.appendChild(p);
     //modifies DOM to display computer choice
     p0.textContent = computerSelection;
-    dir0.appendChild(p0);
+    div0.appendChild(p0);
     //check winner
     checkWinner();
     //console message
     return "Tie. You both chose paper."
   } else if (playerSelection.toUpperCase() == "PAPER" && computerSelection.toUpperCase() == "SCISSORS") {
     //modifies DOM to display round result
-    let div = document.getElementById('dir');
+    let div = document.getElementById('div1');
     let p = document.getElementById('results');
     results.textContent = "Sorry! You loose. Scissors beat paper.";
     div.appendChild(p);
     //modifies DOM to display computer choice
     p0.textContent = computerSelection;
-    dir0.appendChild(p0);
+    div0.appendChild(p0);
     //updates score and modifies DOM to display score
     computerScore = computerScore + 1;
     p2.textContent = playerScore + " - " + computerScore;
-    dir2.appendChild(p2);
+    div2.appendChild(p2);
     //check winner
     checkWinner();
     //console message
     return "Sorry! You loose. Scissors beat paper."
   } else if (playerSelection.toUpperCase() == "SCISSORS" && computerSelection.toUpperCase() == "ROCK") {
     //modifies DOM to display round result
-    let div = document.getElementById('dir');
+    let div = document.getElementById('div1');
     let p = document.getElementById('results');
     results.textContent = "Sorry! You loose. Rock beats scissors.";
     div.appendChild(p);
     //modifies DOM to display computer choice
     p0.textContent = computerSelection;
-    dir0.appendChild(p0);
+    div0.appendChild(p0);
     //updates score and modifies DOM to display score
     computerScore = computerScore + 1;
     p2.textContent = playerScore + " - " + computerScore;
-    dir2.appendChild(p2);
+    div2.appendChild(p2);
     //check winner
     checkWinner();
     //console message
     return "Sorry! You loose. Rock beats scissors."
   } else if (playerSelection.toUpperCase() == "SCISSORS" && computerSelection.toUpperCase() == "PAPER") {
     //modifies DOM to display round result
-    let div = document.getElementById('dir');
+    let div = document.getElementById('div1');
     let p = document.getElementById('results');
     results.textContent = "Congratulations! You win. Scissors beats paper.";
     div.appendChild(p);
     //modifies DOM to display computer choice
     p0.textContent = computerSelection;
-    dir0.appendChild(p0);
+    div0.appendChild(p0);
     //updates score and modifies DOM to display score
     playerScore = playerScore + 1;
     p2.textContent = playerScore + " - " + computerScore;
-    dir2.appendChild(p2);
+    div2.appendChild(p2);
     //check winner
     checkWinner();
     //console message
     return "Congratulations! You win. Scissors beats paper."
   } else if (playerSelection.toUpperCase() == "SCISSORS" && computerSelection.toUpperCase() == "SCISSORS") {
     //modifies DOM to display round result
-    let div = document.getElementById('dir');
+    let div = document.getElementById('div1');
     let p = document.getElementById('results');
     results.textContent = "Tie. You both chose scissors.";
     div.appendChild(p);
     //modifies DOM to display computer choice
     p0.textContent = computerSelection;
-    dir0.appendChild(p0);
+    div0.appendChild(p0);
     //check winner
     checkWinner();
     //console message
@@ -220,12 +220,12 @@ function playRound(playerSelection, computerSelection) {
 let playerScore = 0
 let computerScore = 0
 
-let dir2 = document.getElementById('dir2');
+let div2 = document.getElementById('div2');
 let p2 = document.getElementById('score');
 
 //DOM manipulation to show computer selection
 
-let dir0 = document.getElementById('dir0')
+let div0 = document.getElementById('div0')
 let p0 = document.getElementById('compSelection')
 
 //old checkwinner
@@ -233,13 +233,13 @@ let p0 = document.getElementById('compSelection')
 function checkWinner() {
   if (playerScore == 3) {
     p2.textContent = "YOU WIN!!!";
-    dir2.appendChild(p2);
+    div2.appendChild(p2);
     alert("You win!");
     location.reload()
     throw new Error("You win!")
   } else if (computerScore ==3) {
     p2.textContent = "YOU LOOSE!!!";
-    dir2.appendChild(p2);
+    div2.appendChild(p2);
     alert("You loose!")
     location.reload()
     throw new Error("You loose!")

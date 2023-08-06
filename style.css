@@ -1,6 +1,11 @@
+html, body {
+  height: 100%;
+}
+
 body {
   font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   margin: 0px;
+  background-image: linear-gradient(rgb(210, 33, 33), rgb(32, 41, 47));
 }
 
 
@@ -11,7 +16,6 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  border: 1px solid red
 }
 
 .header-bottom {
@@ -21,7 +25,6 @@ body {
 .empty {
   background-color: rgb(52, 67, 79);
   flex: 1;
-  border: 1px solid red;
 }
 
 .content1 {
@@ -29,26 +32,23 @@ body {
   background-color: rgb(52, 67, 79);
   text-align: center;
   margin-top: 50px;
-  border: 1px solid red
 }
 
 .text1 {
-  color: rgb(219, 220, 173);
+  color: rgb(232, 234, 127);
   font-weight: bold;
   font-size: 40px;
 }
 
 .text2 {
-  color: rgb(168, 169, 133);
+  color: rgb(207, 208, 176);
   font-size: 20px;
   margin: 10px;
 }
 
 .content2 {
-  background-color: rgb(71, 112, 99);
   margin: 0px;
   padding: 0px;
-  border: 1px solid red;
 }
 
 .buttons-outer {
@@ -61,7 +61,7 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   gap: 50px;
-  background-color: #afb2b8;
+  background-color: #e3cae9;
   height: fit-content;
   width: fit-content;
   margin: 0px;
@@ -109,13 +109,69 @@ button:active {
 }
 
 .computer {
-  justify-content: center;
-  gap: 50px;
-  background-color: #afb2b8;
+  background-color: #e3cae9;
   height: fit-content;
-  width: fit-content;
+  width: 520px;
   margin: 0px;
   padding: 50px;
-  border: 1px solid red;
+  border: 1px solid rgb(94, 162, 133);
   border-radius: 10px;
+}
+
+.computer-top {
+  display: flex;
+  gap: 40px;
+  padding: 0px;
+  margin: 0px;
+}
+
+.result-box {
+  background-color: #ecdaf1;
+  border: 1px solid rgb(94, 162, 133);
+  border-radius: 10px;
+}
+
+.computer-middle {
+  padding: 0px;
+  margin: 0px;
+}
+
+.computer-bottom {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0px;
+  margin: 0px;
+}
+
+h2 {
+  color: rgb(41, 70, 57);
+  font-weight: bold;
+  font-size: 20px;
+  margin: 10px 0px;
+}
+
+.text3,
+.text4 {
+  color: rgb(58, 100, 81);
+  font-weight: bold;
+  font-size: 20px;
+  margin: 10px 0px;
+}
+
+.text4 {
+  text-align: center;
+  color: #9b1313;
+}
+
+footer {
+  height: 50px;
+  background-color: rgb(32, 41, 47);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(199, 187, 187);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }

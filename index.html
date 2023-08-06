@@ -10,13 +10,14 @@
 
   <body>
     <header>
-      <div class="header-top"></div>
+      <div class="header-top">
+        <p class="text2" style="margin-top: 13px;">RPS by OdinsonDev</p>
+      </div>
       <div class="header-bottom">
         <div class="empty"></div>
         <div class="content1">
           <p class="text1">ROCK PAPER SCISSORS</p>
           <p class="text2">Test your wits against a state of the art AI</p>
-          <p class="text2">The future of humanity is at stake !</p>
           <p class="text2">Best of 5 wins</p>
           <p class="text2">Let the battle begin !</p>
         </div>
@@ -24,32 +25,39 @@
       </div>
     </header>
 
-    <dir class="content2">
+    <div class="content2">
       <br>
-      <dir class="buttons-outer">
-        <dir class="buttons">
+      <div class="buttons-outer">
+        <div class="buttons">
           <button id="button1">ROCK</button>
           <button id="button2">PAPER</button>
           <button id="button3">SCISSORS</button>
-        </dir>
-      </dir>
+        </div>
+      </div>
       <br>
-      <dir class="computer-outer">
-        <dir class="computer" id="dir0">
-          <h2>Computer selection:</h2>
-          <p id="compSelection">Computer is thinking</p>
-        </dir>
-      </dir>
+      <div class="computer-outer">
+        <div class="computer">
+          <div class="computer-top" id="div0">
+            <h2>Computer:</h2>
+            <p class="text3" id="compSelection">Analysing probability matrix and stuff..</p>
+          </div>
+          <div class="result-box">
+            <div class="computer-middle" id="div1">
+              <p class= "text4" id="results">Results</p>
+            </div>
+            <div class="computer-bottom" id="div2">
+              <h2>Score:</h2>
+              <p class="text4" id="score">0 - 0</p>
+            </div>
+          </div>
+        </div>       
+      </div>
       <br>
-      <dir id="dir">
-        <p id="results">Results</p>
-      </dir>
-      <br>
-      <dir id="dir2">
-        <h2>Score</h2>
-        <p id="score">0 - 0</p>
-      </dir>
-    </dir>
+    </div>
+
+    <footer>
+      <p class="text2">Copyright &copy; Odinsondev 2023</p>
+    </footer>
 
     <script src="javascript.js"></script>
   </body>
