@@ -5,6 +5,7 @@ html, body {
 body {
   font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   margin: 0px;
+  background-color: rgb(32, 41, 47);
   background-image: linear-gradient(rgb(210, 33, 33), rgb(32, 41, 47));
 }
 
@@ -38,6 +39,7 @@ body {
   color: rgb(232, 234, 127);
   font-weight: bold;
   font-size: 40px;
+  margin: 40px 0px 20px 0px;
 }
 
 .text2 {
@@ -113,7 +115,7 @@ button:active {
   height: fit-content;
   width: 520px;
   margin: 0px;
-  padding: 50px;
+  padding: 20px 50px 50px 50px;
   border: 1px solid rgb(94, 162, 133);
   border-radius: 10px;
 }
@@ -129,6 +131,7 @@ button:active {
   background-color: #ecdaf1;
   border: 1px solid rgb(94, 162, 133);
   border-radius: 10px;
+  padding: 10px;
 }
 
 .computer-middle {

@@ -231,247 +231,31 @@ let p0 = document.getElementById('compSelection')
 //old checkwinner
 
 function checkWinner() {
-  if (playerScore == 3) {
+  if (playerScore == 5) {
+    //Displays result
     p2.textContent = "YOU WIN!!!";
     div2.appendChild(p2);
-    alert("You win!");
-    location.reload()
-    throw new Error("You win!")
-  } else if (computerScore ==3) {
+    //Changes colour
+    bodyColor[0].style.backgroundImage = "linear-gradient(green, rgb(32, 41, 47))";
+    html[0].appendChild(bodyColor[0]);
+    //alert("You win!");             Browser Alert message - removed as runs first
+    //location.reload();             Reloads page
+    setTimeout(function(){           //Reloads page in 1 second
+      location.reload();
+    }, 1000);
+    //throw new Error("You win!");   Throws error in console
+  } else if (computerScore ==5) {
     p2.textContent = "YOU LOOSE!!!";
     div2.appendChild(p2);
-    alert("You loose!")
-    location.reload()
-    throw new Error("You loose!")
+    bodyColor[0].style.backgroundImage = "linear-gradient(rgb(210, 33, 33), rgb(103, 16, 16))";
+    html[0].appendChild(bodyColor[0]);
+    setTimeout(function(){
+      location.reload();
+    }, 1000);
   } else {}
 }
 
-//let playerChoice = prompt("'Rock, Paper or Scissors' Test round")
-//const playerSelection = playerChoice;
-//const computerSelection = getComputerChoice(choice);
+//change colour if WIN
 
-
-//console.log(playRound(playerSelection, computerSelection));
-
-//console.log("That was a little test. Now the real game starts. Best of 5. Good luck!")
-
-
-
-/* //5 rounds
-//round1
-
-function game(playerSelectionX, computerSelectionX) {
-  return playRound(playerSelectionX, computerSelectionX);
-}
-
-let playerChoice2 = prompt("'Rock, Paper or Scissors' Round 1")
-const playerSelection2 = playerChoice2;
-choice = getRandomInteger(0.1, 0.4)
-const computerSelection2 = getComputerChoice(choice);
-
-console.log(game(playerSelection2, computerSelection2))
-
-//round1 - score
-
-let playerScore = 0
-let computerScore = 0
-let thing1 = playRound(playerSelection2, computerSelection2)
-
-function score() {
-  if (thing1 == "Congratulations! You win. Rock beats scissors." || thing1 == "Congratulations! You win. Paper beats rock." || thing1 =="Congratulations! You win. Scissors beats paper.") {
-  playerScore = playerScore + 1;
-  return "Point to you"
- } else if (thing1 == "Sorry! You loose. Paper beats rock." || thing1 == "Sorry! You loose. Scissors beat paper." || thing1 == "Sorry! You loose. Rock beats scissors.") {
-  computerScore = computerScore + 1
-  return "Point to the computer"
- } else {
-  return "Try again"
- }
-}
-
-console.log(score())
-
-console.log(playerScore)
-console.log(computerScore)
-
-
-
-//round2
-
-let playerChoice3 = prompt("'Rock, Paper or Scissors' Round 2")
-const playerSelection3 = playerChoice3;
-choice = getRandomInteger(0.1, 0.4)
-const computerSelection3 = getComputerChoice(choice);
-
-console.log(game(playerSelection3, computerSelection3))
-
-//round2 - score
-
-let thing2 = playRound(playerSelection3, computerSelection3)
-
-function score2() {
-  if (thing2 == "Congratulations! You win. Rock beats scissors." || thing2 == "Congratulations! You win. Paper beats rock." || thing2 =="Congratulations! You win. Scissors beats paper.") {
-  playerScore = playerScore + 1;
-  return "Point to you"
- } else if (thing2 == "Sorry! You loose. Paper beats rock." || thing2 == "Sorry! You loose. Scissors beat paper." || thing2 == "Sorry! You loose. Rock beats scissors.") {
-  computerScore = computerScore + 1
-  return "Point to the computer"
- } else {
-  return "Try again"
- }
-}
-console.log(score2())
-
-console.log(playerScore)
-console.log(computerScore)
-
-
-
-//round3
-
-let playerChoice4 = prompt("'Rock, Paper or Scissors' Round 3")
-const playerSelection4 = playerChoice4;
-choice = getRandomInteger(0.1, 0.4)
-const computerSelection4 = getComputerChoice(choice);
-
-console.log(game(playerSelection4, computerSelection4))
-
-//round3 - score
-
-let thing3 = playRound(playerSelection4, computerSelection4)
-
-function score3() {
-  if (thing3 == "Congratulations! You win. Rock beats scissors." || thing3 == "Congratulations! You win. Paper beats rock." || thing3 =="Congratulations! You win. Scissors beats paper.") {
-  playerScore = playerScore + 1;
-  return "Point to you"
- } else if (thing3 == "Sorry! You loose. Paper beats rock." || thing3 == "Sorry! You loose. Scissors beat paper." || thing3 == "Sorry! You loose. Rock beats scissors.") {
-  computerScore = computerScore + 1
-  return "Point to the computer"
- } else {
-  return "Try again"
- }
-}
-console.log(score3())
-
-console.log(playerScore)
-console.log(computerScore)
-
-//round3 - check winner
-
-function checkWinner() {
-  if (playerScore == 3) {
-    alert("You win!")
-    throw new Error("You win!")
-  } else if (computerScore ==3) {
-    alert("You loose!")
-    throw new Error("You loose!")
-  } else {}
-}
-
-console.log(checkWinner())
-
-
-
-//round4
-
-let playerChoice5 = prompt("'Rock, Paper or Scissors' Round 4")
-const playerSelection5 = playerChoice5;
-choice = getRandomInteger(0.1, 0.4)
-const computerSelection5 = getComputerChoice(choice);
-
-console.log(game(playerSelection5, computerSelection5))
-
-//round4 - score
-
-let thing4 = playRound(playerSelection5, computerSelection5)
-
-function score4() {
-  if (thing4 == "Congratulations! You win. Rock beats scissors." || thing4 == "Congratulations! You win. Paper beats rock." || thing4 =="Congratulations! You win. Scissors beats paper.") {
-  playerScore = playerScore + 1;
-  return "Point to you"
- } else if (thing4 == "Sorry! You loose. Paper beats rock." || thing4 == "Sorry! You loose. Scissors beat paper." || thing4 == "Sorry! You loose. Rock beats scissors.") {
-  computerScore = computerScore + 1
-  return "Point to the computer"
- } else {
-  return "Try again"
- }
-}
-console.log(score4())
-
-console.log(playerScore)
-console.log(computerScore)
-
-//round4 - check winner
-
-console.log(checkWinner())
-
-
-
-//round5
-
-let playerChoice6 = prompt("'Rock, Paper or Scissors' Round 5")
-const playerSelection6 = playerChoice6;
-choice = getRandomInteger(0.1, 0.4)
-const computerSelection6 = getComputerChoice(choice);
-
-console.log(game(playerSelection6, computerSelection6))
-
-//round5 - score
-
-let thing5 = playRound(playerSelection6, computerSelection6)
-
-function score5() {
-  if (thing5 == "Congratulations! You win. Rock beats scissors." || thing5 == "Congratulations! You win. Paper beats rock." || thing5 =="Congratulations! You win. Scissors beats paper.") {
-  playerScore = playerScore + 1;
-  return "Point to you"
- } else if (thing5 == "Sorry! You loose. Paper beats rock." || thing5 == "Sorry! You loose. Scissors beat paper." || thing5 == "Sorry! You loose. Rock beats scissors.") {
-  computerScore = computerScore + 1
-  return "Point to the computer"
- } else {
-  return "Try again"
- }
-}
-console.log(score5())
-
-console.log(playerScore)
-console.log(computerScore)
-
-//round5 - check winner
-
-console.log(checkWinner())
-
-
-
-//round6
-
-let playerChoice7 = prompt("'Rock, Paper or Scissors' Round 6")
-const playerSelection7 = playerChoice7;
-choice = getRandomInteger(0.1, 0.4)
-const computerSelection7 = getComputerChoice(choice);
-
-console.log(game(playerSelection7, computerSelection7))
-
-//round6 - score
-
-let thing6 = playRound(playerSelection7, computerSelection7)
-
-function score6() {
-  if (thing6 == "Congratulations! You win. Rock beats scissors." || thing6 == "Congratulations! You win. Paper beats rock." || thing6 =="Congratulations! You win. Scissors beats paper.") {
-  playerScore = playerScore + 1;
-  return "Point to you"
- } else if (thing6 == "Sorry! You loose. Paper beats rock." || thing6 == "Sorry! You loose. Scissors beat paper." || thing6 == "Sorry! You loose. Rock beats scissors.") {
-  computerScore = computerScore + 1
-  return "Point to the computer"
- } else {
-  return "Try again"
- }
-}
-console.log(score6())
-
-console.log(playerScore)
-console.log(computerScore)
-
-//round6 - check winner
-
-console.log(checkWinner())
- */
+let html = document.getElementsByTagName('html')
+let bodyColor = document.getElementsByTagName('body')
