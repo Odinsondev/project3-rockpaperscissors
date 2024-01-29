@@ -73,11 +73,11 @@ function playRound(playerSelection, computerSelection) {
     //modifies DOM to display round result
     let div = document.getElementById('div1');
     let p = document.getElementById('results');
-    results.textContent = "Tie. You both chose Rock.";
-    div.appendChild(p);
+    results.textContent = "Tie. You both chose Rock.";   //28.01.24 should be p.textContent
+    div.appendChild(p);                                  //Unnecessary line
     //modifies DOM to display computer choice
     p0.textContent = computerSelection;
-    div0.appendChild(p0);
+    div0.appendChild(p0);                                //Unnecessary line
     //check winner
     checkWinner();
     //console message
